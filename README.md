@@ -79,7 +79,7 @@ Same agent code. Zero changes. Just config.
 
 Actively being built in public. Follow along.
 
-### ? Done
+###  Done
 - Solution structure and project layout
 - Neutral source control models
   - `WorkItem` — platform-agnostic ticket model
@@ -90,12 +90,12 @@ Actively being built in public. Follow along.
   - Full `CancellationToken` support for agent loop control
   - Works for Azure DevOps, GitHub, or both simultaneously
 
-### ?? In Progress
+###  In Progress
 - `IAgent` and `IAgentTool` — the agent loop contracts
 - `MeridianAgent` — the ReAct loop implementation
 - `AgentContext` — shared memory across agent steps
 
-### ?? Coming Next
+### Coming Next
 - Azure DevOps provider implementation
 - GitHub provider implementation  
 - SharePoint document provider
@@ -106,6 +106,6 @@ See [ROADMAP.md](ROADMAP.md) for the full plan.
 
 ---
 
-## Architecture
+## Architecture - Mental Model
 
 <img width="1229" height="849" alt="image" src="https://github.com/user-attachments/assets/4f221b8b-740a-4032-b654-191d94404f7c" />
