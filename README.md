@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![.NET](https://img.shields.io/badge/.NET-8.0-purple.svg)](https://dotnet.microsoft.com)
 
-> Build production-grade AI agents in .NET — connected to Azure DevOps, GitHub, 
+> Build production-grade AI agents in .NET â€” connected to Azure DevOps, GitHub, 
 > SharePoint, and the tools your enterprise already runs on.
 
 ---
@@ -17,11 +17,11 @@ SharePoint, and on-premise infrastructure are left behind.
 
 Meridian fixes that.
 
-- **Self-hosted** — your code never leaves your network
-- **Semantic Kernel native** — builds on Microsoft's own AI SDK
-- **Platform agnostic** — Azure DevOps and GitHub treated as equals
-- **Enterprise connectors** — SharePoint, Excel, Azure AI Search out of the box
-- **.NET first** — idiomatic C#, full DI support, async throughout
+- **Self-hosted** â€” your code never leaves your network
+- **Semantic Kernel native** â€” builds on Microsoft's own AI SDK
+- **Platform agnostic** â€” Azure DevOps and GitHub treated as equals
+- **Enterprise connectors** â€” SharePoint, Excel, Azure AI Search out of the box
+- **.NET first** â€” idiomatic C#, full DI support, async throughout
 
 ---
 
@@ -29,7 +29,7 @@ Meridian fixes that.
 
 A senior .NET developer gets ticket ADO-1234 or GitHub Issue #567.
 Today they read it, find the relevant code, write the fix, test it, 
-open a PR, and update the ticket — manually, every time.
+open a PR, and update the ticket â€” manually, every time.
 
 Meridian makes that a conversation:
 
@@ -41,16 +41,15 @@ var result = await agent.RunAsync(
 ```
 
 The agent reads the ticket, searches the codebase, finds the bug,
-writes idiomatic C# code, runs the tests, and opens the PR —
+writes idiomatic C# code, runs the tests, and opens the PR â€”
 connected to your actual Azure DevOps or GitHub.
 
----
 ---
 
 ## The Provider Pattern
 
 Agents never talk to Azure DevOps or GitHub directly.
-They talk to `ISourceControlProvider` — and you decide at startup which 
+They talk to `ISourceControlProvider` â€” and you decide at startup which 
 platform backs it:
 
 ```csharp
@@ -62,7 +61,7 @@ builder.Services.AddMeridian(options =>
 builder.Services.AddMeridian(options =>
     options.UseGitHub(config["GitHub:Token"]));
 
-// Both — common during enterprise migrations
+// Both â€” common during enterprise migrations
 builder.Services.AddMeridian(options => options
     .UseAzureDevOps(config["ADO:OrgUrl"])
     .UseGitHub(config["GitHub:Token"]));
@@ -73,29 +72,30 @@ Same agent code. Zero changes. Just config.
 ---
 
 ## Setup (Visual Studio 2022)
+
 ---
 
-## Current State — v0.1 Alpha ??
+## Current State â€” v0.1 Alpha ðŸš§
 
 Actively being built in public. Follow along.
 
-### ? Done
+### âœ… Done
 - Solution structure and project layout
 - Neutral source control models
-  - `WorkItem` — platform-agnostic ticket model
-  - `PullRequest` — works for ADO and GitHub equally
-  - `Repository` — neutral repo representation
-  - `Branch` — with protected branch awareness
-- `ISourceControlProvider` — the core contract every provider implements
+  - `WorkItem` â€” platform-agnostic ticket model
+  - `PullRequest` â€” works for ADO and GitHub equally
+  - `Repository` â€” neutral repo representation
+  - `Branch` â€” with protected branch awareness
+- `ISourceControlProvider` â€” the core contract every provider implements
   - Full `CancellationToken` support for agent loop control
   - Works for Azure DevOps, GitHub, or both simultaneously
 
-### ?? In Progress
-- `IAgent` and `IAgentTool` — the agent loop contracts
-- `MeridianAgent` — the ReAct loop implementation
-- `AgentContext` — shared memory across agent steps
+### ðŸ”„ In Progress
+- `IAgent` and `IAgentTool` â€” the agent loop contracts
+- `MeridianAgent` â€” the ReAct loop implementation
+- `AgentContext` â€” shared memory across agent steps
 
-### ?? Coming Next
+### ðŸ“‹ Coming Next
 - Azure DevOps provider implementation
 - GitHub provider implementation  
 - SharePoint document provider
@@ -106,4 +106,6 @@ See [ROADMAP.md](ROADMAP.md) for the full plan.
 
 ---
 
-## Architecture
+## Architecture - Mental Model
+
+<img width="1229" height="849" alt="image" src="https://github.com/user-attachments/assets/4f221b8b-740a-4032-b654-191d94404f7c" />
