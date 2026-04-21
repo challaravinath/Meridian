@@ -45,7 +45,6 @@ writes idiomatic C# code, runs the tests, and opens the PR —
 connected to your actual Azure DevOps or GitHub.
 
 ---
----
 
 ## The Provider Pattern
 
@@ -73,13 +72,14 @@ Same agent code. Zero changes. Just config.
 ---
 
 ## Setup (Visual Studio 2022)
+
 ---
 
-## Current State — v0.1 Alpha ??
+## Current State — v0.1 Alpha 🚧
 
 Actively being built in public. Follow along.
 
-###  Done
+### ✅ Done
 - Solution structure and project layout
 - Neutral source control models
   - `WorkItem` — platform-agnostic ticket model
@@ -90,12 +90,12 @@ Actively being built in public. Follow along.
   - Full `CancellationToken` support for agent loop control
   - Works for Azure DevOps, GitHub, or both simultaneously
 
-###  In Progress
+### 🔄 In Progress
 - `IAgent` and `IAgentTool` — the agent loop contracts
 - `MeridianAgent` — the ReAct loop implementation
 - `AgentContext` — shared memory across agent steps
 
-### Coming Next
+### 📋 Coming Next
 - Azure DevOps provider implementation
 - GitHub provider implementation  
 - SharePoint document provider
